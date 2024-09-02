@@ -1,0 +1,11 @@
+{
+  "body": "",
+  "email": "camila.oliveira@inmetrics.com.br",
+  "ignoreTestFiles": [
+    "**/1-getting-started/*.js",
+    "**/2-advanced-examples/*.js"
+  ],
+  "name": "Camila",
+  "testFiles": "**/*.{feature,features,spec.js}"
+}
+
