@@ -1,6 +1,8 @@
 # Auto-Cypress
  Desafio de Automação de testes em cypress.
+ 
   Esse desafio se trata da elaboração de testes automatizados do site AdvantageShop com as seguintes validações:
+  
     WEB:
     § Realize a busca de um produto;
 
@@ -21,5 +23,6 @@
         Validar o status code da resposta do serviço
 
 · Tecnologias Utilizadas:
-Para a escrita dos cenários solicitados seguindo BDD: Cucumber;
+Para a escrita dos cenários solicitados seguindo BDD: Cucumber.
+
 Linguagem de programação: Cypress
