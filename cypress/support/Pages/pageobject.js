@@ -1,4 +1,4 @@
-    class LoginPage {
+class LoginPage {
         enterURL() {
           cy.visit("https://advantageonlineshopping.com/#/");
         }
@@ -21,7 +21,27 @@
             cy.get("#password").type("password");
           return this;
         }
+ }
+
+ class Buscar{
+
+  barradepesquisa() {
+    cy.get('#mobileSearch > .roboto-medium').click()
+    return this;
+  }
+
+  produto (produto) {
+    cy.get('#mobileSearch > .roboto-medium').type('mice')
+    return this;
+  }
+
+  lupa() {
+    cy.get('#mobileSearch > #menuSearch').click()
+  }
 
  }
+
+
+ 
  const login = new LoginPage();
  export default login;
