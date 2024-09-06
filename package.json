@@ -28,7 +28,7 @@
     "dotenv": "^8.2.0",
     "firebase-admin": "^9.1.1",
     "sri": ">=8.0.1"
-    
+  
   },
   
   "scripts": {
