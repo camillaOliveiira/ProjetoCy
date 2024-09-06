@@ -1,13 +1,29 @@
+import {Given, And, When, Then, cucumberTemplate} from "cypress-cucumber-preprocessor/lib/cucumberTemplate";
+import {ELEMENTS} from "../support/Pages/Elements";
+import login from "../support/Pages/pageobject";
+import { features } from "process";
+import(cucumberTemplate);
+import(cucumberJson);
+import(ELEMENTS);
+import(features);
+import { TestContext } from "node:test"; 
 
-describe('Buscar Produto', () => {
-    it('Dado que acesso o site Advantage', () => {
-        cy.visit('https://advantageonlineshopping.com/#/')
-    })
-    it('Quando busco por mice e pressiono Enter'), () => {
-    }
-    it('Entao exibe uma lista de produtos relacionados com mice', () =>{
-        cy.visit('https://advantageonlineshopping.com/#/')
-        cy.get('#mobileSearch > .roboto-medium').type('mice')
-            .type('{enter}')
-    })
-})
+
+Given('Que acesso o site Advantage', () => {
+    login.enterURL();
+    return true;
+});
+
+And('clico na barra de pesquisa', () =>{
+    Buscar.barradepesquisa();
+    return true;
+});
+
+When('busco por mice e clico na lupa', () => {
+    Buscar.produto();
+    Buscar.lupa();
+});
+
+Then ('exibe uma lista de produtos relacionados com mice', () =>{
+    cy.get('.pages').should('be.visible');
+});
