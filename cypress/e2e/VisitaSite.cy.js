@@ -1,19 +1,21 @@
-/*import {Given} from "cypress-cucumber-preprocessor/steps";*/
+import {Given, Then, cucumberTemplate} from "cypress-cucumber-preprocessor/lib/cucumberTemplate";
+import {ELEMENTS} from "../support/Pages/Elements";
+import login from "../support/Pages/pageobject";
+import { features } from "process";
+import(cucumberTemplate);
+import(cucumberJson);
+import(ELEMENTS);
+import(features);
+import { TestContext } from "node:test"; 
 
-/*   Given("I am on the home page", () => {
-        cy.visit("https://advantageonlineshopping.com/#/")
-    })
-    Then("I should see a navigation ", () => {
-        cy.get('footer').scrollIntoView()
-    })
-*/
-describe('Navegando Pelo Site AdvantageShop', () => {
-    it('Dado que estou na página inicial', () => {
-        cy.visit('https://advantageonlineshopping.com/#/')
-    })
-    it('Entao devo conseguir navegar pela homePage', () => {
-        cy.get('body').should('be.visible')
-            .trigger('mousedown')
+Given("que estou na página inicial", () => {
+    login.enterURL();
+    cy.get('.logo > a').should('be.visible')
+    return true;
+});
 
-    })
-})
+Then ("devo conseguir navegar pela homePage", () => {
+    cy.get('body').should('be.visible')
+        cy.get('#follow').scrollIntoView({ duration: 2000 })
+        return true;
+});
