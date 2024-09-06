@@ -7,7 +7,8 @@ Funcionalidade: Visitar Site
 	# Fluxo de iniciar visita ao Site Advantage
 	# Envolve a página Home
 
-  Cenário: Navegando Pelo Site AdvantageShop
-    Dado que estou na página inicial
-    Quando site carregar
-    Entao devo conseguir navegar pela homePage
+        @TesteAcesso
+        Cenário: Navegando Pelo Site AdvantageShop
+            Given que estou na página inicial
+             When site carregar
+             Then devo conseguir navegar pela homePage
