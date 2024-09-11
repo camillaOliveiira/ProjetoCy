@@ -1,5 +1,10 @@
 # Auto-Cypress
  Desafio de Automação de testes em cypress.
+ OBS. Para execução dos Testes, utilizar o comando npx cypress run no terminal;
+ Criado no VSCode.
+ Author: Camila de Sousa Oliveira
+
+
  
   Esse desafio se trata da elaboração de testes automatizados do site AdvantageShop com as seguintes validações:
   
