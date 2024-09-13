@@ -1,23 +1,11 @@
-#language: pt
-#Author: Camila de Sousa Oliveira
-# Version: 1.0
-#Encoding: UTF-8
+Feature: Login
 
-Funcionalidade: Login
-	# Fluxo de iniciar visita ao Site Advantage
-	# Envolve a página Home
-
-        @TesteLogin
-        Esquema do Cenário: login bem-sucedido no Site AdvantageShop
-            Dado que estou na página inicial
-              E entro na página de login
-             Quando insiro credenciais válidas
-              E eu clico no botão de login
-             Então devo conseguir efetuar login com sucesso
-
-        Cenário: Falha no login
-            Dado que estou na página inicial
-              E que estou na página de login
-             Quando insiro credenciais invalidas
-              E eu clico no botão de login
-             Então não devo conseguir efetuar login
+              As a valid user
+              I want to log in into Application
+  
+        Scenario: Successful login to the AdvantageShop Website
+            Given I m on the home page
+              And I enter the login page
+             When I enter my username  and password
+              And I click the login button
+             Then I should be able to log in successfully
