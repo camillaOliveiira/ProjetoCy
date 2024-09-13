@@ -1,47 +1,25 @@
-import {Given, And, When, Then} ;
-import {cucumberTemplate} from "cypress-cucumber-preprocessor/lib/cucumberTemplate";
-import {ELEMENTS} from "../support/Pages/Elements";
-import login from "../support/Pages/pageobject";
-import(cucumberTemplate);
-import(cucumberJson);
-import(ELEMENTS);
+import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import 'cypress-cucumber-steps'
+import LoginPage from '../../../support/pageobject'
 
-    Given("que estou na página inicial", () => {
-        login.enterURL();
-        return true;
+
+    Given('I m on the home page', () => {
+        LoginPage.enterURL()
     });
 
-    And("E entro na página de login"), () => {
-        login.clickSignInLink();
-    return true;
-    };
-    
-    When("insiro credenciais válidas", (database) => {
-        login.enterusernamepassword(username, password)
-        cy.get("#username").type("camila.oliveira");
-        cy.get("#password").type("Novasenha123");
-        return true;
-    };
+    And('I enter the login page', () => {
+        LoginPage.clickSignInLink()
+    })
 
-    And("clico no botão de login", () => {
-        login.clickSignButton();
-    });
+    When('I enter my username and password', () => {
+        LoginPage.enterusername('username')
+        LoginPage.enterpassword('password')
+    })
 
-    When("insiro credenciais invalidas", () => {
-        enteruserpassinvalid(usernamein, passwordin)
-        cy.get("#username").type("invalidusername");
-        cy.get("#password").type("invalidpassword");
-        return false;
-    });
+    And('I click the login button', () => {
+        LoginPage.clickSignButton()
+    })
 
-    And("clico no botão de login", () => {
-        login.clickSignButton();
-    });
-
-    Then("devo conseguir efetuar login com sucesso", () => {
-        cy.get('#menuUserLink').should("be.visible");
-    });
-
-    Then("não devo conseguir efetuar login", () => {
-        cy.get('#signInResultMessage').should("be.visible");
-    });
+    Then('I should be able to log in successfully', () => {
+        cy.contains('#menuUserLink').should('be.visible')
+    })
