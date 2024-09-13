@@ -1,17 +1,17 @@
-
+const cucumber = require ('cypress-cucumber-preprocessor').default
 const { defineConfig } = require("cypress");
-const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
-  
+  projectId: "nha27g",
   e2e: {
-    projectId: 'yar8bd',
-    setupNodeEvents(on, _config) {
-      on('file:preprocessor', cucumber());     
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      on('file:preprocessor', cucumber())
     },
-  
-    specPattern: "cypress/e2e/step_definitions/login/*.feature",
+    specPattern: "cypress/e2e/step_definitions/**.feature"
   },
+});
+
 /*video: true ,
 videoCompression: false,
 videosFolder: 'cypress/videos',
@@ -20,5 +20,3 @@ viewportWidth: 1000,
 waitForAnimations: true,
 watchForFileChanges: true,
 appid: "<apiKey>",**/
-
-});
