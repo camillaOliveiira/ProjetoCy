@@ -1,12 +1,28 @@
 # Auto-Cypress
  Desafio de Automação de testes em cypress.
+
+ Contempla os segintes passos:
+ *Visit
+ *Login
+ *Lista de Produtos
+ *Busca de Produto
+ *Inclusão de Produto no carrinho
+ *Checkout
+
  OBS. Para execução dos Testes, utilizar o comando npx cypress run no terminal;
+
+ *Testes estão sendo refatorados ...
+
+# Tecnologias Utilizadas:
+Para a escrita dos cenários solicitados seguindo BDD: Cucumber.
+
+Linguagem de programação: Cypress
+
  Criado no VSCode.
+
  Author: Camila de Sousa Oliveira
 
-
- 
-  Esse desafio se trata da elaboração de testes automatizados do site AdvantageShop com as seguintes validações:
+Esse desafio se trata da elaboração de testes automatizados do site AdvantageShop com as seguintes validações:
   
     WEB:
     § Realize a busca de um produto;
@@ -27,7 +43,3 @@
         Verifique o id da image nova inserida
         Validar o status code da resposta do serviço
 
-· Tecnologias Utilizadas:
-Para a escrita dos cenários solicitados seguindo BDD: Cucumber.
-
-Linguagem de programação: Cypress
