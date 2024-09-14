@@ -2,14 +2,22 @@
  Desafio de Automação de testes em cypress.
 
  Contempla os segintes passos:
+ 
  *Visit
+ 
  *Login
+ 
  *Lista de Produtos
+ 
  *Busca de Produto
+ 
  *Inclusão de Produto no carrinho
+ 
  *Checkout
 
- OBS. Para execução dos Testes, utilizar o comando npx cypress run no terminal;
+ OBS. Para execução dos Testes, 
+
+ utilizar o comando npx cypress run no terminal;
 
  *Testes estão sendo refatorados ...
 
