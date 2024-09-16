@@ -4,6 +4,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: "nha27g",
   e2e: {
+    //declarar apenas quando testar API
+    //baseUrl: 'https://www.advantageonlineshopping.com/catalog/api/v1/products/search',
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('file:preprocessor', cucumber())
