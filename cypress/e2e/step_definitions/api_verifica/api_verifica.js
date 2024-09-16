@@ -1,31 +1,19 @@
 import{Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
-
+import req_api_verify from "../../../support/api_ver"
 
 Given("that I want to search for the product {word}", () =>{
-    cy.request({
-        method: 'GET',
-        url: '?name=MICE&quantityPerEachCategory=9',
-    })
+    req_api_verify.api_url()
 })
    
 When("I make the request", () => {
-    cy.request({
-        method: 'GET',
-        url: '?name=MICE&quantityPerEachCategory=9',
-    }).as('MICE');
+    req_api_verify.requisicao()
 })
     
 Then("I validate that the status code is {int}", () => {
-    cy.get('@MICE').then((Response) => {
-cy.log(JSON.stringify(Response.body));
-    });
+    req_api_verify.status()
 })
    
 And("I validate that the category returned is Mice", () => {
-    cy.request({
-        method: 'GET',
-        url: '?name=MICE&quantityPerEachCategory=9',
-        categoryId: '5'
-    }).as('mice');
+    req_api_verify.valid_category()
 })
     
