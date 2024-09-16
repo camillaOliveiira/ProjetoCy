@@ -45,7 +45,7 @@ Esse desafio se trata da elaboração de testes automatizados do site AdvantageS
         Verifique se a lista exibe somente produtos conforme sua busca.
         Validar o status code da resposta do serviço.
 
-    $ Atualize a imagem de um produto (PUT):
+    $ Atualize a imagem de um produto (POST):
         API: https://www.advantageonlineshopping.com/catalog/api/v1/product/image/{userId}/{source}/{color}
         Verifique que o produto foi atualizado corretamente.
         Verifique o id da image nova inserida
