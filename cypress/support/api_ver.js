@@ -1,3 +1,5 @@
+
+
 export default class req_api_verify{
     static api_url() {
         cy.request({
@@ -46,5 +48,6 @@ export default class req_api_verify{
              expect(response.status).to.equal(200);
             });
         }
-        }
+        };
+
     
