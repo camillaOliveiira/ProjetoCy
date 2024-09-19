@@ -4,8 +4,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: "nha27g",
   e2e: {
-    //declarar apenas quando testar API
-    baseUrl: 'https://www.advantageonlineshopping.com/catalog/api/v1/products/search',
+    baseUrl: 'https://www.advantageonlineshopping.com/catalog/api/v1/products',
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('file:preprocessor', cucumber())
@@ -13,12 +12,3 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/step_definitions/**.feature"
   },
 });
-
-/*video: true ,
-videoCompression: false,
-videosFolder: 'cypress/videos',
-viewportHeight: 660,
-viewportWidth: 1000,
-waitForAnimations: true,
-watchForFileChanges: true,
-appid: "<apiKey>",**/
