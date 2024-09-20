@@ -1,7 +1,7 @@
 import { Given, And, When, Then} from 'cypress-cucumber-preprocessor/steps';
-import LoginPage from '../../../support/VisitSit';
-import ListProdut from '../../../support/LoadProductList';
-import Include from '../../../support/Include';
+import LoginPage from '../../../support/PageObjects/VisitSit';
+import ListProdut from '../../../support/PageObjects/LoadProductList';
+import Include from '../../../support/PageObjects/Include';
 
 
 Given("I am logged in", () => {
