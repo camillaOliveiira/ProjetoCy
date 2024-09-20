@@ -1,15 +1,14 @@
-import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps'
-import LoginPage from '../../../support/VisitSit';
-
-Given("que estou na página inicial", () => {
+import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import LoginPage from '../../../support/PageObjects/VisitSit';
+Given("that I'm on the homepage", () => {
     LoginPage.enterURL();
 });
 
-When("eu visualizar a pagina", () => {
+When("I view the page", () => {
     cy.get('.logo > a').should('be.visible');
 });
 
-Then ("devo conseguir navegar pela homePage", () => {
+Then ("I should be able to navigate the homePage", () => {
     cy.get('body').should('be.visible')
         cy.get('#follow').scrollIntoView({ duration: 2000 })
 });
