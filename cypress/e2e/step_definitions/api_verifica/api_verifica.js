@@ -1,5 +1,5 @@
-import {Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
-import req_api_verify from "../../../support/api_ver"
+import{Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
+import req_api_verify from "../../../support/PageObjects/api_ver"
 
 Given("that I want to search for the product {word}", () =>{
     req_api_verify.api_url()
