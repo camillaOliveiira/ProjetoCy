@@ -1,6 +1,6 @@
 import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps';
-import ListProdut from '../../../support/LoadProductList';
-import LoginPage from '../../../support/VisitSit';
+import LoginPage from '../../../support/PageObjects/VisitSit';
+import ListProdut from '../../../support/PageObjects/LoadProductList';
 
 Given ('I m on the main screen', () =>{
     LoginPage.enterURL()
