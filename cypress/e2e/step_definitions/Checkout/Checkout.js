@@ -1,7 +1,7 @@
 import { Given, And, When, Then} from 'cypress-cucumber-preprocessor/steps';
-import checkout from '../../../support/Check';
-import Include from '../../../support/Include';
-import LoginPage from '../../../support/VisitSit';
+import checkout from '../../../support/PageObjects/Check';
+import Include from '../../../support/PageObjects/Include';
+import LoginPage from '../../../support/PageObjects/VisitSit';
 
 Given("that I have a product in the cart", () => {
     LoginPage.enterURL()
