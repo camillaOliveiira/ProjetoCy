@@ -1,6 +1,6 @@
 import{Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
-import req_api_post from "../../../support/post_api"
-import req_api_verify from "../../../support/api_ver"
+import req_api_post from "../../../support/PageObject/post_api"
+
 
 Given("that I want to change an image of a product", () =>{
     req_api_post.ver_img()
