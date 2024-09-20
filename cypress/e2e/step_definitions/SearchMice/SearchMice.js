@@ -1,6 +1,6 @@
 import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps';
-import LoginPage from '../../../support/VisitSit';
-import SearchMice from '../../../support/Search';
+import LoginPage from '../../../support/PageObjects/VisitSit';
+import SearchMice from '../../../support/PageObjects/Search';
 
 Given("I am on the main screen of the Site", () => {
     LoginPage.enterURL();
